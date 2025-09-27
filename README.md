@@ -1,4 +1,4 @@
-# Online Quiz System
+# Online Quiz System 
 
 A fullstack, role-based online quiz system with timed attempts, automatic scoring, leaderboards, and history tracking.
 
@@ -87,3 +87,10 @@ Full routes in `backend/routes/`.
 - Backend: `npm run dev` uses nodemon.
 - Frontend: `npm run dev` starts Vite.
 
+## Team detail
+
+-Team Leader: 
+Daksh Prajapati
+-Team Member: 
+Promish Rakholiya 
+Krish Patel
