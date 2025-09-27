@@ -89,8 +89,5 @@ Full routes in `backend/routes/`.
 
 ## Team detail
 
--Team Leader: 
-Daksh Prajapati
--Team Member: 
-Promish Rakholiya 
-Krish Patel
+-Team Leader: Daksh Prajapati
+-Team Member: Promish Rakholiya & Krish Patel
