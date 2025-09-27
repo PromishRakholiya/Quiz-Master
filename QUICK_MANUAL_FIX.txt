@@ -1,0 +1,41 @@
+🚨 QUICK MANUAL FIX FOR "Failed to fetch" ERROR
+
+If you're seeing "Failed to fetch", follow these 3 simple steps:
+
+=== STEP 1: Create frontend/.env file ===
+1. Go to the 'frontend' folder
+2. Create a file named '.env' (with the dot)
+3. Put this EXACT line in the file:
+
+VITE_API_URL=http://localhost:5000/api
+
+4. Save the file
+
+=== STEP 2: Start backend server ===
+1. Open Command Prompt/Terminal
+2. Navigate to backend folder: cd backend
+3. Run: npm start
+4. You should see: "Server is running on port 5000"
+
+=== STEP 3: Restart frontend ===
+1. Stop the current frontend (Ctrl+C)
+2. Run: npm run dev
+3. Visit: http://localhost:5173
+
+=== AUTOMATED FIX ===
+Instead of manual steps, just double-click: FINAL_FIX.bat
+
+=== VERIFY THE FIX ===
+1. Backend test: http://localhost:5000/api/health
+   Should show: {"status":"OK","message":"Quiz System API is running"}
+
+2. Frontend test: http://localhost:5173
+   Should show homepage without red error banner
+
+=== IF STILL NOT WORKING ===
+- Make sure MongoDB is installed and running
+- Check if ports 5000 and 5173 are not blocked
+- Try running in incognito browser mode
+- Check browser console (F12) for detailed errors
+
+The "Failed to fetch" error will disappear once both servers are running with the correct .env files!

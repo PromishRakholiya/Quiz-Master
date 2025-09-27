@@ -1,0 +1,70 @@
+🔧 MANUAL FIX FOR CONNECTION ERROR
+
+If you see "❌ Connection Failed: Failed to fetch", follow these steps:
+
+=== STEP 1: Create frontend/.env file ===
+
+1. Go to the 'frontend' folder
+2. Create a new file called '.env' (with the dot at the beginning)
+3. Add this single line to the file:
+
+VITE_API_URL=http://localhost:5000/api
+
+4. Save the file
+
+=== STEP 2: Create backend/.env file ===
+
+1. Go to the 'backend' folder  
+2. Create a new file called '.env' (with the dot at the beginning)
+3. Add these lines to the file:
+
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/quiz-system
+JWT_SECRET=quiz_system_super_secret_jwt_key_2024_change_in_production
+JWT_REFRESH_SECRET=quiz_system_super_secret_refresh_key_2024_change_in_production
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_EXPIRES_IN=30d
+FRONTEND_URL=http://localhost:5173
+NODE_ENV=development
+
+4. Save the file
+
+=== STEP 3: Restart both servers ===
+
+Backend:
+1. Open terminal/command prompt
+2. cd backend
+3. npm start
+
+Frontend:
+1. Open another terminal/command prompt
+2. cd frontend  
+3. npm run dev
+
+=== STEP 4: Test the fix ===
+
+1. Visit: http://localhost:5000/api/health
+   Should show: {"status":"OK","message":"Quiz System API is running"}
+
+2. Visit: http://localhost:5173
+   Should show the homepage without red error banner
+
+=== AUTOMATED ALTERNATIVES ===
+
+Instead of manual steps, you can run these scripts:
+
+1. fix-connection-permanently.bat - Fixes everything automatically
+2. verify-setup.bat - Checks if everything is configured correctly
+3. start-quiz-system.bat - Starts both servers automatically
+
+=== TROUBLESHOOTING ===
+
+If still having issues:
+
+1. Make sure both .env files exist and have the correct content
+2. Check if ports 5000 and 5173 are not blocked by firewall
+3. Try running in incognito/private browser mode
+4. Clear browser cache and localStorage
+5. Check browser console (F12) for detailed error messages
+
+The connection error will disappear once both .env files are created and both servers are running!
