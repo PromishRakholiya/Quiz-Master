@@ -49,6 +49,9 @@ npm --prefix frontend run dev
 
 Frontend runs at http://localhost:5173
 
+
+### Screen Shots 
+![alt text](./frontend/assets/1.png) ![alt text](./frontend/assets/2.png) ![alt text](./frontend/assets/3.png) ![alt text](./frontend/assets/4.png) ![alt text](./frontend/assets/5.png) ![alt text](./frontend/assets/6.png) ![alt text](./frontend/assets/7.png)
 ### Environment Variables (backend/.env)
 
 See `backend/.env.example` for all variables.
